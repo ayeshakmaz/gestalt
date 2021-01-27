@@ -1,3 +1,33 @@
+## 16.8.2 (Jan 27, 2021)
+
+### Patch
+
+- Internal: bump resolved version of immer due to security concern (#1352)
+
+## 16.8.1 (Jan 26, 2021)
+
+### Patch
+
+- Z-Index: Consolidate proptype to reduce needed suppressions (#1351)
+
+## 16.8.0 (Jan 25, 2021)
+
+### Minor
+
+- Typeahead: add zIndex prop to support component in Modals with zIndex (#1350)
+
+## 16.7.1 (Jan 22, 2021)
+
+### Patch
+
+- Docs: component source link tweaks (#1347)
+
+## 16.7.0 (Jan 20, 2021)
+
+### Minor
+
+- ModuleExpandable: added external collapsing control (expandedIndex and onExpandedChange) (#1323)
+
 ## 16.6.1 (Jan 16, 2021)
 
 ### Patch

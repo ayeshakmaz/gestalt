@@ -5,6 +5,8 @@ import PropTable from './components/PropTable.js';
 import Example from './components/Example.js';
 import Combination from './components/Combination.js';
 import PageHeader from './components/PageHeader.js';
+// To be used when converting Button docs
+// import MainSection from './components/MainSection.js';
 
 const cards: Array<Node> = [];
 const card = (c) => cards.push(c);
@@ -233,6 +235,37 @@ card(
     ]}
   />
 );
+
+// To be continued when converting Button docs
+// card(
+//   <MainSection
+//     name="Best Practices"
+//     description="Buttons communicate actions that users can take and are typically placed in UIs including closeup modules, modals, flyouts, forms, cards, and bars."
+//   >
+//     <MainSection.Subsection>
+//       <MainSection.Card
+//         type="do"
+//         description="Do place primary buttons to the right or bottom of other button styles."
+//         defaultCode={`
+//   <ButtonGroup>
+//     <Button text="Button" inline color="gray"/>
+//     <Button text="Button" inline color="red"/>
+//   </ButtonGroup>
+//     `}
+//       />
+//       <MainSection.Card
+//         description="Don't place more than one primary button per surface."
+//         type="don't"
+//         defaultCode={`
+//   <ButtonGroup>
+//     <Button text="Button" inline color="red"/>
+//     <Button text="Button" inline color="red"/>
+//   </ButtonGroup>
+//     `}
+//       />
+//     </MainSection.Subsection>
+//   </MainSection>
+// );
 
 card(
   <Example
