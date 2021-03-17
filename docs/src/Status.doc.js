@@ -1,6 +1,6 @@
 // @flow strict
 import React, { type Node } from 'react';
-import { Box } from 'gestalt';
+import { Status } from 'gestalt';
 import PropTable from './components/PropTable.js';
 import PageHeader from './components/PageHeader.js';
 import MainSection from './components/MainSection.js';
@@ -24,7 +24,7 @@ card(
 // Specifying Component gives auto warnings about missing props
 card(
   <PropTable
-    Component={Box}
+    Component={Status}
     props={[
       {
         name: 'type',

@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import Icon from './Icon.js';
 import Flex from './Flex.js';
 import Text from './Text.js';
+import Box from './Box.js';
 
 export type StatusColor = 'gray' | 'green' | 'orange' | 'red';
 
 type Props = {|
   type?: 'unstarted' | 'inProgress' | 'halted' | 'ok' | 'problem' | 'canceled' | 'warning',
-  title?: string,
+  title: string,
   subtext?: string,
 |};
 
@@ -56,24 +57,22 @@ export default function Status(props: Props): Node {
       color = 'darkGray';
   }
 
-  const textNode = title && (
-    /*
-     * TODO: Tell me how to do this correctly w/in the Gestalt dev workflow
-     */
-    <Flex direction="column" style={subtext ? { marginTop: -1 } : null}>
-      <Text size="md">{title}</Text>
-      {subtext ? (
-        <Text size="md" color="gray">
-          {subtext}
-        </Text>
-      ) : null}
-    </Flex>
-  );
-
   return (
-    <Flex gap={2} alignItems={subtext ? 'start' : 'center'}>
-      <Icon accessibilityLabel="" size={16} color={color} icon={icon} />
-      {textNode}
+    <Flex direction="column">
+      <Flex gap={2} alignItems="center">
+        <Icon accessibilityLabel="" size={16} color={color} icon={icon} />
+        <Text size="md">{title}</Text>
+      </Flex>
+
+      {subtext && (
+        <Flex gap={2} alignItems="center">
+          <Box marginStart={6}>
+            <Text size="md" color="gray">
+              {subtext}
+            </Text>
+          </Box>
+        </Flex>
+      )}
     </Flex>
   );
 }
